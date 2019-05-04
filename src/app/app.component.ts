@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   @ViewChild('f') signupForm: NgForm;
-  defaultQuestion = 'pet'
+  defaultQuestion = 'pet';
   answer = '';
   genders = ['male', 'female'];
   user = {
@@ -17,7 +17,7 @@ export class AppComponent {
     secretQuestion: '',
     answer: '',
     gender: '',
-  }
+  };
   submitted = false;
 
   suggestUserName() {
@@ -30,7 +30,7 @@ export class AppComponent {
     //   secret: 'pet',
     //   questionAnswer: '',
     //   gender: 'male'
-      this.signupForm.form.patchValue({
+    this.signupForm.form.patchValue({
         userData: {
           username: suggestedName
         }
